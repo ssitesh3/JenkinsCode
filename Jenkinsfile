@@ -3,7 +3,7 @@ pipeline {
           stages {
             stage('One') {
               steps {
-                      gcc hellomake hellomake.c hellofunc.c -I
+                      gcc hellomake hellomake.c hellofunc.c
               }
             }
           }
