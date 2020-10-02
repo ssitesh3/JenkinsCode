@@ -4,7 +4,6 @@ pipeline {
             stage('One') {
               steps {
                       echo 'Hi, this is Shashwat Sitesh'
-                      sh 'make'
               }
             }
           }
