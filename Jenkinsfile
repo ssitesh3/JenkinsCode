@@ -3,7 +3,7 @@ pipeline {
           stages {
             stage('One') {
               steps {
-                      echo 'Hi, this is Shashwat Sitesh'
+                      gcc -o hellomake hellomake.c hellofunc.c -I
               }
             }
           }
