@@ -1,12 +1,15 @@
 pipeline {
-  agent any
-          stages {
-            stage('One') {
-              steps {
-                step {
-                      gcc hellomake hellomake.c hellofunc.c
+    agent none 
+    stages {
+        stage('Build') { 
+            agent {
+                docker {
+                    image 'ubuntu' 
                 }
-              }
             }
-          }
+            steps {
+                sh 'make'
+            }
+        }
+    }
 }
