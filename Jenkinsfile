@@ -5,7 +5,7 @@ pipeline {
             
             agent {
                 docker {
-                    image 'ubuntu' 
+                    image 'lbeschastny/jenkins-build-essential' ' 
                 }
             }
             steps {
