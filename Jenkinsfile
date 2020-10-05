@@ -1,9 +1,12 @@
 pipeline {
-    agent {
-        docker {image 'jenkinsci/blueocean'}
-    }
+    agent none 
     stages {
-        stage('Build') {
+        stage('Build') { 
+            agent {
+                docker {
+                    image 'jenkinsci/blueocean' 
+                }
+            }
             steps {
                 sh 'make'
             }
