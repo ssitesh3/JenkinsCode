@@ -9,8 +9,6 @@ pipeline {
             }
             steps {
                 sh 'make'
-            }
-            steps {
                 sh './testBin'
             }
         }
