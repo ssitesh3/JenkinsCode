@@ -10,10 +10,9 @@ pipeline {
                 sh 'make'
                 sh './testBin'
             }
-            stage('Test') {
-                steps{
-                    sh cppcheck JenkinsCode
-                }
+        stage('Test') {
+            steps{
+                sh cppcheck JenkinsCode
             }
         }
     }
