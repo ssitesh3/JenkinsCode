@@ -10,7 +10,8 @@ pipeline {
             steps {
                 sh 'make'
                 sh './testBin'
-                cppcheck --xml --xml-version=2.2> cppcheck.xml
+                publishCppcheck allowNoReport: true, ignoreBlankFiles: true, 
+                                                     pattern: '**/cppcheck-result.xml'
             }
         }
     }
