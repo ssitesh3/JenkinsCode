@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'make'
                 sh './testBin'
+                sh cppcheck JenkinsCode
             }
         }
     }
