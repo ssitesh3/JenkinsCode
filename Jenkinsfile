@@ -13,8 +13,7 @@ pipeline {
             }
         stage('Test') {
             steps{
-                
-                sh cppcheck Jenkinsfile
+                sh cppcheck JenkinsCode
             }
         }
     }
