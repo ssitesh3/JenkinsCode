@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'make'
                 sh './testBin'
-                sh cppcheck --enable=all --inconclusive --xml --xml-version=2 JenkinsCode 2> cppcheck.xml
+                cppcheck --enable=all --inconclusive --xml --xml-version=2 JenkinsCode 2> cppcheck.xml
             }
         }
     }
