@@ -1,12 +1,12 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
-            steps {
-                agent {
-                    docker {image 'lbeschastny/jenkins-build-essential'}
-                }
-                    
+        agent {
+            docker {
+                image 'lbeschastny/jenkins-build-essential'
+            }
+        }
+        stage('Build') {        
                 sh 'make'
                 sh './testBin'
             }
