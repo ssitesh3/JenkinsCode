@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'make'
                 sh './testBin'
-                cppcheck --xml --xml-version=2 SOURCE_DIRECTORY 2> cppcheck.xml
+                sh cppcheck
             }
         }
     }
