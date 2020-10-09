@@ -10,7 +10,6 @@ pipeline {
             steps {
                 sh 'make'
                 sh './testBin'
-                cppcheck
             }
         }
     }
