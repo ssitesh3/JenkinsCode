@@ -7,7 +7,7 @@ pipeline {
                     docker {
                         image 'lbeschastny/jenkins-build-essential' 
                     }
-            }
+                    
                 sh 'make'
                 sh './testBin'
             }
