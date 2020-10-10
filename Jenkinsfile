@@ -11,7 +11,7 @@ pipeline {
                 sh 'make'
                 sh './testBin'
                 
-                sh cppcheck 
+                sh cppcheck Makefile
                 /*publishCppcheck allowNoReport: true, ignoreBlankFiles: true, */
                                                      //pattern: '**/cppcheck-result.xml'
             }
