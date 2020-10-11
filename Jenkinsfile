@@ -8,6 +8,10 @@ pipeline {
                 }
             }
             steps {
+                
+                bash '''#!/bin/bash
+                    echo "hello world" 
+                '''
                 sh 'make'
                 sh './testBin'
                 
