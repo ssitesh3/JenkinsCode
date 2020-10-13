@@ -13,7 +13,6 @@ pipeline {
                 sh './testBin'
                 
                 sh label: '', returnStatus: true, script: 'cppcheck --enable=all --inconclusive --xml --xml-version=2 JenkinsCode 2> cppcheck.xml'
-                
                 publishCppcheck allowNoReport: true, ignoreBlankFiles: true, pattern: '**/cppcheck.xml'
                 
             }
