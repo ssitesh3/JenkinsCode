@@ -13,8 +13,8 @@ pipeline {
                 sh './testBin'
                 sh 'ls'
                 
-                sh label: '', returnStatus: true, script: 'cppcheck --enable=all --inconclusive --xml --xml-version=2 . > /tmp/cppcheck.xml'
-                publishCppcheck allowNoReport: true, ignoreBlankFiles: true, pattern: '/tmp/cppcheck.xml'
+                sh label: '', returnStatus: true, script: 'cppcheck --enable=all --inconclusive --xml --xml-version=2 . > cppcheck.xml'
+                publishCppcheck allowNoReport: true, ignoreBlankFiles: true, pattern: 'cppcheck.xml'
                 
             }
         }
