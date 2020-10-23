@@ -24,8 +24,6 @@ pipeline {
                 sh label: '', returnStatus: true, script: 'cppcheck --enable=all --inconclusive --xml --xml-version=2 /var/jenkins_home/workspace/Pipeline_demo 2> cppcheck.xml'
                 publishCppcheck allowNoReport: true, ignoreBlankFiles: true, pattern: '**/*.xml'
                 
-                sh 'ls -al'
-                sh 'pwd'
             }
         }
     }
