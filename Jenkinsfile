@@ -12,8 +12,6 @@ pipeline {
                 sh 'make'
                 sh './testBin'
                 
-                sh 'ls -al'
-                sh 'pwd'
             }
         }
         stage('Analysis') {
